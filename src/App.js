@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const OS = ["Android", "Blackberry", "iPhone", "Windows Phone"];
+  const manufacturers = [
+    { name: "Samsung", w_type: "square" },
+    { name: "HTC", w_type: "square" },
+    { name: "Micromax", w_type: "disc" },
+    { name: "Apple", w_type: "circle" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <div>
+      <h1>Mobile Operating System</h1>
+      <ul>
+        {OS.map((e) => {
+          return<li>{e}</li>;
+        })}
+      </ul>
     </div>
+    <div>
+      <h1>Mobile manufacturers</h1>
+      <ul>
+        {manufacturers.map(({name,w_type}) => {
+          return<li type={w_type}>{name}</li>;
+        })}
+      </ul>
+    </div>
+    </div>
+  
   );
 }
 

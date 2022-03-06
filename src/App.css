@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.borderbox{
+  border: 5px solid blue;
+  padding: 10px;
+  margin :10px;
+}
+
+.mmmm{
+ width: 30px;
+}
